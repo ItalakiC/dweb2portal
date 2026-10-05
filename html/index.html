@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gamefication</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..800&display=swap" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="relogio-caixa">
+        <span class="ponto-vivo"></span>
+        <h3>AO VIVO</h3>
+        <span id="relogio">Carregando...</span>
+    </div>
+
+    <header class="masthead">
+        <h2 class="logo">Gamefication</h2>
+        <nav>
+            <ul>
+                <li>GTA IV</li>
+                <li>Indies</li>
+                <li>Lançamentos</li>
+                <li>Multiplayer</li>
+                <li><button type="button" id="botaoTema" class="botao-tema">🌗 Tema</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="cat-gta">
+            <div class="hero-conteudo">
+                <span class="tag">GTA VI</span>
+                <h1>Rockstar confirma data do primeiro trailer de gameplay de GTA VI e paralisa a internet</h1>
+                <p>Após meses de especulações e mistérios, a desenvolvedora quebrou o silêncio e marcou a transmissão global que mostrará os protagonistas em ação. A expectativa é que o vídeo inédito revele as novas mecânicas de assalto, a densidade populacional e o verdadeiro tamanho do mapa.</p>
+            </div>
+        </section>
+
+        <section id="destaques">
+            <article class="mini cat-lancamentos">
+                <div class="mini-img"></div>
+                <div><span class="tag">Lançamentos</span><h4>Vazamento em loja digital indica que remaster muito aguardado pode ser lançado de surpresa na sexta-feira</h4></div>
+            </article>
+            <article class="mini cat-multiplayer">
+                <div class="mini-img"></div>
+                <div><span class="tag">Multiplayer</span><h4>Recorde absoluto: Lançamento de grande expansão atrai tantos jogadores simultâneos que derruba servidores da publicadora</h4></div>
+            </article>
+            <article class="mini cat-indies">
+                <div class="mini-img"></div>
+                <div><span class="tag">Indies</span><h4>Festival de Demos: 5 jogos independentes imperdíveis para testar de graça neste fim de semana</h4></div>
+            </article>
+        </section>
+
+        <section id="noticias-header">
+            <input type="search" id="busca" placeholder="Buscar pelo título...">
+            <div class="filtros" role="group">
+                <button type="button" class="filtro ativo" data-filtro="todas" id="botaoTodas">Todas</button>
+                <button type="button" class="filtro cat-indies" data-filtro="Indies" id="botaoIndies">Indies</button>
+                <button type="button" class="filtro cat-gta" data-filtro="GTA VI" id="botaoGTA">GTA VI</button>
+                <button type="button" class="filtro cat-multiplayer" data-filtro="Multiplayer" id="botaoMultiplayer">Multiplayer</button>
+                <button type="button" class="filtro cat-lancamentos" data-filtro="Lançamentos" id="botaoLancamentos">Lançamentos</button>
+            </div>
+        </section>
+
+        <section id="lista-noticias">
+            <article class="bloco-noticia cat-indies" data-categoria="Indies">
+                <div class="thumb"></div>
+                <div class="corpo"><span class="tag">Indies</span><h5>Sucesso meteórico: RPG indie feito por uma única pessoa ultrapassa 1 milhão de cópias vendidas</h5>
+                    <p>Combinando mecânicas aconchegantes de gerenciamento com combates desafiadores, o título surpreendeu a indústria e se tornou o jogo independente mais comentado da semana nas redes sociais.</p></div>
+            </article>
+            <article class="bloco-noticia cat-gta" data-categoria="GTA VI">
+                <div class="thumb"></div>
+                <div class="corpo"><span class="tag">GTA VI</span><h5>Rumores apontam sistema inédito de física e clima dinâmico em Vice City</h5>
+                    <p>Patentes registradas pela Rockstar Games sugerem um nível de realismo nunca visto na franquia, com simulação de tempestades em tempo real e inteligência artificial adaptativa para a rotina dos NPCs.</p></div>
+            </article>
+            <article class="bloco-noticia cat-gta" data-categoria="GTA VI">
+                <div class="thumb"></div>
+                <div class="corpo"><span class="tag">GTA VI</span><h5>Mapa de GTA VI pode ser o dobro do tamanho de Los Santos e incluir mais prédios interativos</h5>
+                    <p>Análises da comunidade e dados vazados indicam que a nova Vice City não apenas expandirá a área geográfica do mapa, mas permitirá a exploração do interior de mais de 70% dos estabelecimentos urbanos.</p></div>
+            </article>
+            <article class="bloco-noticia cat-multiplayer" data-categoria="Multiplayer">
+                <div class="thumb"></div>
+                <div class="corpo"><span class="tag">Multiplayer</span><h5>Novo Hero Shooter gratuito ganha beta aberto com foco em eSports e partidas ranqueadas</h5>
+                    <p>Prometendo balanceamento dinâmico e suporte completo a crossplay entre plataformas, o jogo abre seus servidores para o público testar novas arenas e modos de combate em equipe.</p></div>
+            </article>
+            <article class="bloco-noticia cat-lancamentos" data-categoria="Lançamentos">
+                <div class="thumb"></div>
+                <div class="corpo"><span class="tag">Lançamentos</span><h5>Lançamentos do mês: Confira os principais jogos que chegam para PC e consoles</h5>
+                    <p>De sequências de grandes franquias a remakes aguardados, o mês promete ser movimentado no mercado de games. Confira as datas oficiais de estreia e os requisitos recomendados para o seu computador.</p></div>
+            </article>
+            <article class="bloco-noticia cat-indies" data-categoria="Indies">
+                <div class="thumb"></div>
+                <div class="corpo"><span class="tag">Indies</span><h5>O novo padrão dos Metroidvanias: Conheça o estúdio independente que está revolucionando o gênero</h5>
+                    <p>Com uma direção de arte inteiramente pintada à mão e animações hiper-realistas, o novo projeto bateu sua meta de financiamento coletivo em menos de três horas e promete inovar na exploração.</p></div>
+            </article>
+            <article class="bloco-noticia cat-lancamentos" data-categoria="Lançamentos">
+                <div class="thumb"></div>
+                <div class="corpo"><span class="tag">Lançamentos</span><h5>Aguardado RPG de ficção científica atinge "Estado Ouro" e garante lançamento sem adiamentos</h5>
+                    <p>A desenvolvedora confirmou que o desenvolvimento principal da aventura foi concluído com sucesso, garantindo a estreia global conforme planejado para os consoles de última geração.</p></div>
+            </article>
+            <article class="bloco-noticia cat-multiplayer" data-categoria="Multiplayer">
+                <div class="thumb"></div>
+                <div class="corpo"><span class="tag">Multiplayer</span><h5>Atualização de temporada traz novo passe de batalha, mapa de neve e modos temporários</h5>
+                    <p>A nova fase do popular battle royale adiciona dinâmicas territoriais, melhorias no sistema de matchmaking e recompensas exclusivas para squads que jogarem juntos no fim de semana.</p></div>
+            </article>
+        </section>
+
+        <p id="sem-resultado" hidden>Nenhuma notícia encontrada. Tente outro título ou categoria.</p>
+        <div class="centro"><button type="button" id="botaoMais" class="botao-principal">Mostrar mais matérias</button></div>
+
+        <aside id="newsletter">
+            <h3>Receba as novas notícias por e-mail</h3>
+            <form id="formEmail">
+                <input type="text" id="email" placeholder="seuemail@gmail.com" autocomplete="email">
+                <button type="submit" class="botao-principal">Receber notificações</button>
+            </form>
+        </aside>
+    </main>
+
+    <footer class="rodape">
+        &copy; 2026 Gamefication - Italo
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
